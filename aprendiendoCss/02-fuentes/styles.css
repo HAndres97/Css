@@ -1,0 +1,47 @@
+/* 
+###### PRIMERAS FUENTES  #####
+
+*/
+h1{
+    font-family:Arial, Helvetica, sans-serif ;/*Estilo de escritura*/
+    font-size: 25px;/*Tamaño de la letra, se suele usar mucho px, em y % , 1em= 16 px*/
+    font-style: italic;/*Poner letras en cursiva, uso normal o italic*/
+}/**/
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+}
+p{
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bolder;/*Se usa para poner grosor en las letras, bold y bolder*/
+}
+/* 
+###### Fuentes personalizadas, para ello hay que importarlas #####
+*/
+@font-face {
+    font-family: JapaneseCustom;
+    src: url(fuentes/Noto_Sans_JP/static/NotoSansJP-Bold.ttf);
+}
+h2{
+    font-family: 'Comforter', cursive;
+    font-family: 'Ephesis', cursive;
+    text-transform: uppercase; /*Permite transformar las letras en mayuscula o minusculas*/
+    font-size: 45px;
+}
+#color-importado{
+    font-family: JapaneseCustom;
+    font-size: 35px;
+    /*##### TRABAJAREMOS AHORA CON COLORES######*/
+    /*PODEMOS USAR COLORES DEL SISTEMA*/
+    color: greenyellow;
+
+    /*COLORES HEXADECIMALES*/
+    color: #eee;
+
+    /*COLORES RGB*/
+    color: rgb(255, 255, 103);
+    /*COLORES RGBA*/
+    color: rgba(255, 255, 103,0.5);/*El 1 es transparancia, 1 es maximo, 0.5 la mitad*/
+
+}

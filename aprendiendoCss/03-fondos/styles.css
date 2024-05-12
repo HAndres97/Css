@@ -1,0 +1,36 @@
+body{
+    background-color: #ccc;
+    /*Puedo poner color, imagines,repeticion, posicion*/
+    /*background-image: url(img/fondo-1.jpeg);*/
+    background-repeat: repeat;
+    background-size: 50%;/*Podemos dar tamaño a la imagen*/
+    background-attachment: fixed;/*El fondo no se mueve al hacer scroll*/
+    background-position: left;/*Pociosiona la imagen*/
+
+    text-indent: 15px;/*Cada salto de parrafo poner una sangria*/
+    word-spacing: 10px;/*Para separar palabras*/
+    /*letter-spacing: 5px; Sirve para separar letras de una palabra*/
+    
+}
+#caja{
+    border: 5px solid black;
+    padding: 10px;
+    background-color: rebeccapurple;
+    color: white;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;/*Para posicionar texto*/
+    line-height: 50px; /*Para separar las lineas*/
+    text-transform: uppercase; 
+    text-decoration: underline;
+    vertical-align: top;
+}
+h2{
+    color: red;
+    border: 5px solid red;
+    background: white;
+    
+}
+p{
+    color: red;
+}

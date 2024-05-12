@@ -1,0 +1,8 @@
+/*  Para usar modulos 
+    Para dividir trabajo y luego lo unimos en un mismo archivo
+    Recuerda que los archivos deben empezar por _archivo.scss
+    Y para llamarlo con poner el nombre sin _ @use'archivo';
+*/
+
+@use 'bases';
+@use 'encabezado';

@@ -1,0 +1,97 @@
+/* 
+    #####SELECTORES#####
+*/
+/*
+    SELECTOR UNIVERSAL: Da estilo a toda la página web
+*/
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+/*
+    SELECTOR DE ETIQUETA: Seleccionar los elementos por su etiqueta, h1, div, body..........
+h1{
+    color:red;
+    background:grey;
+}
+a{
+    text-decoration:none;
+}
+footer a{
+    Seleccione etiqueta footer y dentro de footer a
+    color:blue;
+}
+*/
+/*
+    SELECTOR DE ID: Seleccionamos los id del index, con #, ADEMÁS DE QUE LOS IDS SON UNICOS, SI QUEREMOS MODIFICAR MÁS DE 1, SE USA CLASS
+#description,
+#titulo
+{
+    border: 5px solid black;
+    padding: 15px;
+}
+###### ACLARACIÓN LAS HOJAS DE ESTILO SE LEEN DE ARRIBA HACIA ABAJO, POR LO QUE LO ULTIMO QUE PONGAMOS REESCRIBE A LO ANTERIOR
+*/
+/*
+    SELECTOR DE CLASE: IGUAL QUE UN ID PERO PARA MULTIPLES ELEMENTOS, se usa con un punto ., ADEMAS QUE PUEDEN IR CON VARIOS CLASS UN MISMO ELEMENTO
+*/
+.parrafo{
+    font-style: italic;
+    /*text-decoration: underline;*/
+    font-weight: bold;
+}
+.parrafo1, .parrafo3 /*PODEMOS COMPARTIR PROPIEDADES, Y LUEGO REESCRIBIR APARTE ALGO QUE SE DISTINTO*/
+{
+    background-color: aqua;
+    color: bisque;
+    padding: 10px;
+}
+.parrafo3{
+    color: blue;
+}
+/*
+    SELECTOR DE ATRIBUTO: SE USAN MAS EN LOS FORMULARIOS, input[type="lo que sea"]
+*/
+#usuarios{
+    border: 5px solid blue;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 20px;
+}
+#usuarios *{
+    display:block;
+}
+input[type="text"]{
+    width: 200px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+input[type="submit"]{
+    background: green;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
+}
+/*
+SELECTORES HIJOS
+
+*/
+#menu > li > ul > li > a{
+    font-size: 20px;
+    color:red;
+    text-decoration: none;
+}
+/*############################### PRIORIDAD
+    CSS premia la especificidad entre mas especifico mejor, mayor prioridad
+    Cuando queremos que algo general se sobreponga sobre lo especifico !important
+     h1{
+        color:blue !important; Se Sobrepone a la prioridad
+     }
+     #saludo h1{
+        color:red; Aqui la prioridad seria este
+     }
+
+*/

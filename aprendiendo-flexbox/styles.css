@@ -1,0 +1,100 @@
+    /*APRENDEREMOS FLEXBOX PASO A PASO*/
+body{
+
+        --rojo:red;
+        margin: 0px;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+}
+
+#layout{
+    display:flex;
+
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    /*flex flow: row wrap*/
+
+    justify-content: space-evenly;
+    /*EVITAMOS PONER MARGIN OPX AUTO, TEXT LAIGN CENTER*/
+    align-items: flex-start;
+
+    border: 3px solid black;
+    padding: 5px;
+    height: 600px;
+}
+.caja{
+
+    /*flex-basis: calc((100% / 3) - 68px) ;*/
+    /*flex-grow: 1;*/
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+
+    background-color: grey;
+    padding: 20px;
+    border: 4px solid #222;
+    margin: 10px;
+}
+.red{
+    /*order: 3;*/
+    /*flex-grow: 5;*/
+    
+    background-color: var(--rojo);
+}
+.green{
+    /*flex-grow: 4;*/
+    /*order: 4;*/
+    margin-top: 10%;;
+    background-color: green;
+}
+.blue{
+    /*flex-shrink: 0;*/
+    /*order: 2;*/
+    align-self: center;
+    background-color: blue;
+}
+.orange{
+    /*order: 1;*/
+    /*flex-grow: 5;*/
+    /*flex-basis: 100%;*/
+    align-self: flex-end;
+    background-color: orange;
+}
+
+    /*PARA USAR FLEX, TODO EL CONTENIDO TIENE QUE ESTAR DENTRO DE UNA CAJA*/
+    /*  Flex solo actua dentro de la caja
+        display: flex el ancho de la caja es del 100%
+        display: inline-flex el ancho se adapta a las cajas
+
+        flex-direction: row --Fila por defecto
+        flex-direction:coloumn --Columna
+        EL COLUMN/ROW REVERSE CAMBIA EL ORDEN DE LA CAJA, LA PRIMERA LA ULTIMA
+        flex-direction: row
+
+        flex-wrap: Los elementos no se salen del envoltorio, pasan a la siguiente fila
+
+        flex-flow:row wrap; Une la direccion y el wrap
+
+        
+        order se usa en cada caja para poner un orden
+        order:-1 el primero, cuando se tiene mas order podemos poner al
+        primero el 1, y asi 1,2,3,4
+
+        Se usa dentro de las cajas, o del elemento hijo del flex
+        flex-grow:1; Hace que todos los elementos tengan el mismo tamaño
+        ESPECIFICA CUANTO PUEDE CRECER UN ELEMENTO
+
+        flex-shrink: Lo contrario, disminuye el tamaño, segun un orden
+
+        flex-basis:Tamaño minimo que tienen los elementos, a partir de ahi expandirse o quedarse ahi
+
+        justify-content : Organiza nuestro contenido.
+
+        align-items Alinear verticalmente los elementos de una caja
+        align-self se alinea el elemento elegido
+
+
+    */

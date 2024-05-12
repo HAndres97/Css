@@ -1,0 +1,46 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    padding: 20px;
+}
+#cajas{
+    max-width: 1035px;
+    border: 1px solid black;
+}
+.caja
+{
+    display: block;
+     /*inline como se comporto elementos de texto, imagnes,objetos que no estan pensados para moverlos de un lado a otro*/
+     /*none para ocultar un bloque*/
+     /*block para divs cajasss */
+    float: left;
+    width: 200px;
+    height: 200px;
+    /*Podemos poner el tamaño maximo/minimo que puede tener nuestras cajas 
+    min-width: none;
+    max-width: 500px;*/
+    background-color: lightblue;
+    border: 3px solid red;
+
+    margin: 15px 10px 5px 20px;/*Margen alrededor de la caja por fuera superior,derecha, inferior, izquierda*/
+    
+    margin-top: 20px;
+    margin-right: 34px;
+    margin-bottom: 35px;
+    margin-left: 50px;
+    /*Margen interior de la caja */
+    padding: 20px;
+
+}
+p{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 20px;
+    /*line-height: 235px;*/
+}
+.clearfix{
+    float: none;
+    clear: both;
+}

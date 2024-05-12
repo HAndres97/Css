@@ -1,0 +1,132 @@
+    //Variables
+$fuente-tipica: sans-serif, Helvetica, Arial;
+$color-fondo: #ccc;
+$color-letra: red;
+$color-secundario: rgb(122, 20, 20);
+
+    /*
+        PARA LA COMPILACIÓN DEL ARCHIVO SASS HAY QUE IR AL DIRECTORIO DONDE SE HUBICA EL
+        EL ARCHIVO TIENE QUE SER A TRAVÉS DE COMANDOS COMO
+        CD PARA IR cd C:\Users\hchri\OneDrive\Escritorio\Udemy\Css\aprendiendo-sass
+        DIR PARA VER LO QUE HAY AHI
+        CLS PARA LIMPIAR TERMINAL
+        UNA VEZ DENTRO
+        --watch estilos.scss styles.css
+        Compìla el archivo hasta que lo paremos
+      */
+    //Uso de Variables
+body{
+    background-color: $color-fondo;
+    font-family: $fuente-tipica;
+}
+h1{
+    color: $color-letra;
+}
+p{
+    color: $color-secundario;
+}
+/*Anidacion*/
+.caja{
+    border: 1px solid black;
+    width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    h1{
+        color: blue;
+    }
+    p{
+        color: green;
+    }
+    .info{
+        font-size: 30px;
+        .autor{
+            p{
+                font-size: 25px;
+                color: orange;
+            }
+        }
+    }
+}
+    /*  Modulacion en Sass
+        ES COMO HACER IMPORT ESTA DESARROLLADO EN EL ARCHIO ESTILOS.SCSS
+    */
+    /*
+        MIXINS/FUNCIONES: Es un conjunto de instrucciones que se van ejecutar
+        guardadas en una misma capsula, PUEDEN RECIBIR PARAMETROS
+    */
+    @mixin crearBordes($color,$size,$shadow){
+        border: $size solid $color;
+        border-radius: $size;
+        box-shadow: 0px 0px $size $shadow;
+    }
+    .caja{
+        @include crearBordes(red,10px,black);
+    }
+    .listado{
+        @include crearBordes(green,20px,yellow);
+    }
+    //Herencia, lo mismo que mixin pero sin parametros
+    %alert-normal{
+        border: 1px solid gray;
+        background: #ddd;
+        color: blue;
+        padding: 10px;
+        width: 90%;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
+    .alert{
+        @extend %alert-normal;
+    }
+    .alert-danger{
+        @extend %alert-normal;
+        color: red;
+        border-color: red;
+    }
+    .alert-sucess{
+        @extend %alert-normal;
+        color: green;
+        border-color: green;
+    }
+
+    //Operadores
+    .clearfix{
+        left: none;
+        clear: both;
+    }
+    h1{
+        font-size: 20px + 5px - 1px;
+    }
+    .cajas{
+        width: 900px;
+        margin: 0px auto;
+    }
+    .caja{
+        float: left;
+        //ÇPodemos aplicar porcentajes para poner un numero de cajas
+        //Asi luego dejarlos en %  para luego el Responsive
+        width: 200px / 900px * 100%;
+        margin: 20px;
+    }
+
+    //CONDICIONALES, ESTRUCTURAS DE CONTROL NO SE SUELEN USAR 
+    //SE PUEDE HACER, PERO NO ES DE MUCHA 
+
+    //CONDICIONALES -IF
+    h1 {
+        @if $color-fondo == #ccc{
+            color: black;
+        }@else {
+            color: lightsalmon;
+        }
+    }
+    
+    //FOR mas útil
+    $contador : 1;
+    @for $contador from 1 through 10{
+        .listado ul li:nth-child(#{$contador}){
+            font-size:$contador * 3px;
+        }
+    }

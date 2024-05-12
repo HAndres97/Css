@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/*  Para usar modulos 
+    Para dividir trabajo y luego lo unimos en un mismo archivo
+    Recuerda que los archivos deben empezar por _archivo.scss
+    Y para llamarlo con poner el nombre sin _ @use'archivo';
+*/
+/*
+    PARA LA COMPILACIÓN DEL ARCHIVO SASS HAY QUE IR AL DIRECTORIO DONDE SE HUBICA EL
+    EL ARCHIVO TIENE QUE SER A TRAVÉS DE COMANDOS COMO
+    CD PARA IR cd C:\Users\hchri\OneDrive\Escritorio\Udemy\Css\aprendiendo-sass
+    DIR PARA VER LO QUE HAY AHI
+    CLS PARA LIMPIAR TERMINAL
+    UNA VEZ DENTRO
+    --watch estilos.scss styles.css
+    Compìla el archivo hasta que lo paremos
+  */
+body {
+  background-color: #ccc;
+  font-family: sans-serif, Helvetica, Arial;
+}
+
+h1 {
+  color: red;
+}
+
+p {
+  color: rgb(122, 20, 20);
+}
+
+/*Anidacion*/
+.caja {
+  border: 1px solid black;
+  width: 500px;
+  margin: 0px auto;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+}
+.caja h1 {
+  color: blue;
+}
+.caja p {
+  color: green;
+}
+.caja .info {
+  font-size: 30px;
+}
+.caja .info .autor p {
+  font-size: 25px;
+  color: orange;
+}
+
+/*  Modulacion en Sass
+    ES COMO HACER IMPORT ESTA DESARROLLADO EN EL ARCHIO ESTILOS.SCSS
+*/
+/*
+    MIXINS/FUNCIONES: Es un conjunto de instrucciones que se van ejecutar
+    guardadas en una misma capsula, PUEDEN RECIBIR PARAMETROS
+*/
+.caja {
+  border: 10px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.listado {
+  border: 20px solid green;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px yellow;
+}
+
+.alert-sucess, .alert-danger, .alert {
+  border: 1px solid gray;
+  background: #ddd;
+  color: blue;
+  padding: 10px;
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 20px;
+}
+
+.alert-danger {
+  color: red;
+  border-color: red;
+}
+
+.alert-sucess {
+  color: green;
+  border-color: green;
+}
+
+.clearfix {
+  left: none;
+  clear: both;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.cajas {
+  width: 900px;
+  margin: 0px auto;
+}
+
+.caja {
+  float: left;
+  width: 22.2222222222%;
+  margin: 20px;
+}
+
+h1 {
+  color: black;
+}
+
+.listado ul li:nth-child(1) {
+  font-size: 3px;
+}
+
+.listado ul li:nth-child(2) {
+  font-size: 6px;
+}
+
+.listado ul li:nth-child(3) {
+  font-size: 9px;
+}
+
+.listado ul li:nth-child(4) {
+  font-size: 12px;
+}
+
+.listado ul li:nth-child(5) {
+  font-size: 15px;
+}
+
+.listado ul li:nth-child(6) {
+  font-size: 18px;
+}
+
+.listado ul li:nth-child(7) {
+  font-size: 21px;
+}
+
+.listado ul li:nth-child(8) {
+  font-size: 24px;
+}
+
+.listado ul li:nth-child(9) {
+  font-size: 27px;
+}
+
+.listado ul li:nth-child(10) {
+  font-size: 30px;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */

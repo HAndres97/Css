@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+/*
+    PRIMERA LECCION DE RESPONSIVE USAR  % PARA MAQUETAR, YA QUE SE ADAPTAN
+    EN CAMBIO EN PX, SE MANTIENEN AUNQUE ESTRECHES LA PAGINA O LO AGRANDES
+    EL WIDTH EN % Y ALTURA EN PX
+*/
+#contenedor{
+    width: 70%;
+    background-color: aqua;
+    margin: 0px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.clearfix{
+    float:none;
+    clear: both;
+}
+header{
+    width: 100%;
+    height: 150px;
+    background-color: lightskyblue;
+    color: #333;
+    text-align: center;
+    line-height: 150px;
+}
+aside{
+    width: 25%;
+    min-height: 700px;
+    background-color: #ccc;
+    float: left;
+    text-align: center;
+    line-height: 700px;
+}
+#articles{
+    background-color: lemonchiffon;
+    width: 75%;
+    min-height:  700px; ;
+    float: left;
+}
+#articles #article{
+    width: 25%;
+    height: 150px;
+    background-color: green;
+    color: white;
+    line-height: 150px;
+    text-align: center;
+    border: 1px solid white;
+    float: left;
+    margin: 15px;
+}
+
+/*
+    APRENDIENDO RESPONSIVE CON MEDIA QUERIES
+*/
+/*Desde la anchura 0px hasta la anchura 850px*/
+@media (max-width: 850px){
+    /*Se ejecutaran estos estilos*/
+    #articles #article{
+        width: 40%;
+        background-color: red;
+    }
+}
+@media (max-width: 620px){
+    #contenedor{
+        overflow: hidden;
+    }
+    aside{
+        float: none;
+        min-height: auto;
+        line-height: 20px;
+        width: 91%;
+        padding: 19px;
+
+    }
+    #articles{
+        width: 100%;
+    }
+    #articles #article{
+        width: 90%;
+        background-color: yellow;
+    }
+}

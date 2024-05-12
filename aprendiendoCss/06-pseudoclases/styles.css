@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul li{
+    font-size: 25px;
+}
+ /*
+    PSEUDOCLASES ES UN TIPO DE SELECTOR
+ */
+ ul li:first-child{
+    /*Elege al primer hijo*/
+    color: blue;
+
+ }
+ ul li:nth-child(2){
+    /*Elege el numero de hijo en este caso 2*/
+    color: brown;
+ }
+ ul li:last-child{
+    /*Elege el ultimo hijo*/
+    color: blueviolet;
+ }
+/*
+    Podemos cambiar el color a nuestros enlaces
+    segun su estado
+*/
+ #mi-enlace{
+    font-size: 20px;
+    color: lightsalmon;
+ }
+ #mi-enlace:link{
+    color: red;
+ }
+ #mi-enlace:visited{
+    color: orange;
+ }
+ /*
+    Tambien podemos cuando pasamos por encima el cursor
+    o cuando presionamos el enlace
+ */
+ #mi-enlace:hover{
+    color: blue;
+ }
+ #mi-enlace:active{
+    color: green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+
+
+ input[type="text"]{
+    margin-top: 20px;
+    padding: 10px;
+ }
+ input[type="text"]:focus{
+    border: 4px dashed red;
+ }
